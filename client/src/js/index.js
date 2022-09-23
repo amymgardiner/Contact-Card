@@ -2,7 +2,6 @@
 import { initdb, getDb, postDb } from './database';
 import { fetchCards } from './cards';
 import { toggleForm, clearForm } from './form';
-import './submit';
 
 // Import CSS files
 import '../css/index.css';
