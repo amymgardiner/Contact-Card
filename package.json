@@ -4,17 +4,14 @@
   "description": "Module 19 Lesson Activity - Progressive Web Applications (PWA)",
   "main": "index.js",
   "scripts": {
-    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
-    "start": "cd server && node server.js",
-    "server": "cd server nodemon server.js --ignore client",
+    "start:dev": "concurrently \"cd server && npm run server\"  \"cd client && npm run build\"",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server node server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "concurrently \"cd client && npm install\" \"cd server && npm install\" ",
-    "client": "cd client && npm start"
+    "client": "cd client && npm start",
+    "heroku-prebuild": "npm install --dev"
   },
-  "engines": {
-    "node": "16.15.1"
-  },
-  "heroku-prebuild": "npm install --dev",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/amymgardiner/Contact-Card.git"
@@ -27,5 +24,8 @@
   "homepage": "https://github.com/amymgardiner/Contact-Card#readme",
   "dependencies": {
     "concurrently": "^7.4.0"
+  },
+  "engines": {
+    "node": "16.15.1"
   }
 }
