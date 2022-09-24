@@ -19,7 +19,6 @@ import Dog from '../images/dog.png';
 window.addEventListener('load', function () {
   initdb();
   fetchCards();
-
   document.getElementById('logo').src = Logo;
   document.getElementById('bearThumbnail').src = Bear;
   document.getElementById('dogThumbnail').src = Dog;
@@ -36,7 +35,7 @@ newContactButton.addEventListener('click', (event) => {
 });
 
 form.addEventListener('submit', (event) => {
-  // Handle data
+  // handle the form data
   event.preventDefault();
   let name = document.getElementById('name').value;
   let phone = document.getElementById('phone').value;
@@ -71,7 +70,6 @@ form.addEventListener('submit', (event) => {
 });
 
 // Card functionality
-
 // Adds deleteCard() to the global scope so each card has access to it.
 window.deleteCard = (e) => {
   // Grabs the id from the button element attached to the contact card.
@@ -97,15 +95,20 @@ window.editCard = (e) => {
 
   form.style.display = 'block';
 
-  // Toggles the Submit button so that it now Updates an existing contact instead of posting a new one
+  // Toggles the submit button so that it now Updates an existing contact instead of posting a new one
   submitBtnToUpdate = true;
 };
 
+// Checks to see if serviceWorker exists in the navigator and installs our service worker configurations
 if ('serviceWorker' in navigator) {
-  // Use the window load event to keep the page load performant
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./service-worker.js');
-  });
+  navigator.serviceWorker
+    .register('./service-worker.js')
+    .then(function (reg) {
+      console.log('Successfully registered service worker', reg);
+    })
+    .catch(function (err) {
+      console.warn('Error whilst registering service worker', err);
+    });
 }
 
 // Install button
