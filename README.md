@@ -15,4 +15,6 @@ This module, taught me how to do the following:
 
 ## View
 
-The [Production Version](https://quiet-eyrie-71771.herokuapp.com/) of this PWA is located here.
+The [Production Version](https://contact-card-vwf6.onrender.com/) of this PWA is located here.
+
+**Update: Due to the removal of Heroku's free product plans, I have found another free hosting platform that was not taught in the bootcamp. The [Heroku link](https://quiet-eyrie-71771.herokuapp.com/) for this site no longer works. Please view this site with the new link above. Thanks!**
