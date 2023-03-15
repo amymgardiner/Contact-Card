@@ -13,8 +13,10 @@ This module, taught me how to do the following:
 -Use service workers to cache assets for offline functionality.  
 -Convert an existing web application to a PWA.
 
+**Update: Due to the removal of Heroku's free product plans, I have found another free hosting platform that was not taught in the bootcamp. The [Heroku link](https://quiet-eyrie-71771.herokuapp.com/) for this site no longer works. Please view this site with the new link below. Thanks!**
+
 ## View
 
-The [Production Version](https://contact-card-vwf6.onrender.com/) of this PWA is located here.
+`Note: I use Render now for hosting my school projects, on their free plan. A free plan will spin down after 15 minutes of inactivity, and the next request will spin it back up, which can take awhile. So please be patient as the site may take some time to initially load due to Render restrictions.`
 
-**Update: Due to the removal of Heroku's free product plans, I have found another free hosting platform that was not taught in the bootcamp. The [Heroku link](https://quiet-eyrie-71771.herokuapp.com/) for this site no longer works. Please view this site with the new link above. Thanks!**
+The [Production Version](https://contact-card-vwf6.onrender.com/) of this PWA is located here.
